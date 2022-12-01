@@ -17,6 +17,43 @@
     "ws": "^8.11.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "node": true,
+      "es2022": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2022,
+      "sourceType": "module"
+    },
+    "extends": [
+      "eslint:recommended",
+      "prettier"
+    ],
+    "rules": {
+      "no-console": "error",
+      "line-comment-position": [
+        "error",
+        {
+          "position": "beside",
+          "ignorePattern": "EXPLICIT|NOERROR|ALLOW|TODO|todo|Todo|--|reason",
+          "applyDefaultIgnorePatterns": false
+        }
+      ]
+    }
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "endOfLine": "auto",
+    "bracketSameLine": true,
+    "vueIndentScriptAndStyle": true
   }
 }
